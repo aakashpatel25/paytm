@@ -115,10 +115,10 @@ be used to do so.
 """
 # window = Window.partitionBy("COUNTRY_FULL").orderby("YEARMODA")
 # processed_data = (final_weather_data.withColumn(
-#                     "lag_date",  lag("YEARMODA", 1, "").over(w1))
+#                     "lag_date",  lag("YEARMODA", 1, "").over(window))
 #                         .withColumn(
-#                     "lag_val", lag("Tornadoes", 1, "").over(w1))
-#                   .withColumn("index", sum("jump").over(w1))
+#                     "lag_val", lag("Tornadoes", 1, "").over(window))
+#                   .withColumn("index", sum("jump").over(window))
 #                   .withColumn('RowCount', )
 #                  )
 
